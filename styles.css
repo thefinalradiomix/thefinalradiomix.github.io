@@ -141,3 +141,76 @@
 @media(max-width:760px){
   .scroll-cue{padding:8px 11px 8px 9px}
 }
+
+
+/* ON AIR — balanced floating composition */
+.air-grid{
+  grid-template-columns:minmax(0,1.12fr) minmax(280px,.88fr);
+  align-items:center;
+  column-gap:clamp(34px,5vw,82px);
+}
+.air-card{
+  min-height:0;
+  border-top:0;
+  transition:transform .3s ease,opacity .3s ease;
+}
+.main-card{
+  min-height:230px;
+  padding:25px 24px 25px 0;
+  background:radial-gradient(ellipse at 70% 75%,rgba(22,119,255,.15),transparent 58%);
+  border-top:1px solid rgba(174,196,225,.32);
+  border-bottom:1px solid rgba(174,196,225,.16);
+}
+.main-card .card-kicker{margin-bottom:22px}
+.main-card > div:nth-child(2){display:flex;flex-direction:column;align-items:flex-start}
+.main-card .card-number{margin-bottom:12px}
+.main-card h3{
+  white-space:nowrap;
+  font-size:clamp(29px,3.25vw,46px);
+  letter-spacing:.045em;
+  line-height:1.05;
+  margin:0 0 14px;
+}
+.main-card:after{right:4%;bottom:-205px}
+.annual-card{
+  min-height:190px;
+  padding:24px 0 24px 34px;
+  border-left:1px solid rgba(174,196,225,.24);
+  border-top:1px solid rgba(174,196,225,.2);
+  border-bottom:1px solid rgba(174,196,225,.12);
+  background:linear-gradient(110deg,rgba(13,22,35,.34),rgba(10,16,26,.04));
+  transform:translateY(20px);
+}
+.annual-card:hover{transform:translateY(16px)}
+.annual-card h3{
+  font-size:clamp(25px,2.7vw,36px);
+  line-height:1.02;
+  margin:18px 0 13px;
+}
+.annual-card .card-description{font-size:11px}
+.annual-card .text-link{margin-top:19px}
+@media(max-width:900px) and (min-width:761px){
+  .air-grid{column-gap:28px;grid-template-columns:minmax(0,1.05fr) minmax(250px,.95fr)}
+  .main-card h3{font-size:clamp(27px,3.1vw,36px)}
+  .annual-card{padding-left:25px}
+}
+@media(max-width:760px){
+  .air-grid{display:grid;grid-template-columns:1fr;row-gap:28px}
+  .main-card{min-height:205px;padding:23px 0 25px}
+  .main-card h3{
+    white-space:normal;
+    font-size:clamp(32px,9vw,43px);
+    line-height:1.02;
+  }
+  .annual-card{
+    min-height:0;
+    padding:23px 0 23px 22px;
+    margin-left:13%;
+    transform:translateY(0);
+    border-left:1px solid rgba(174,196,225,.28);
+    border-top:1px solid rgba(174,196,225,.2);
+    border-bottom:1px solid rgba(174,196,225,.12);
+  }
+  .annual-card:hover{transform:translateY(-2px)}
+  .annual-card h3{font-size:clamp(27px,7vw,34px);margin:17px 0 12px}
+}
