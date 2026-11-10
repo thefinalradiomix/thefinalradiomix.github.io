@@ -92,3 +92,17 @@
   .scroll-cue{display:flex;left:7%;bottom:30px;font-size:7px}
   .hero-index{display:none}
 }
+
+
+/* Scroll cue: readable over the bright floor reflection */
+.scroll-cue{
+  padding:9px 13px 9px 10px;
+  border:1px solid rgba(174,196,225,.2);
+  border-radius:2px;
+  background:linear-gradient(90deg,rgba(4,8,15,.88),rgba(4,8,15,.66));
+  box-shadow:0 4px 18px rgba(0,0,0,.3);
+  backdrop-filter:blur(5px);
+}
+@media(max-width:760px){
+  .scroll-cue{padding:8px 11px 8px 9px}
+}
