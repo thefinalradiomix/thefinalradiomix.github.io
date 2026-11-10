@@ -214,3 +214,14 @@
   .annual-card:hover{transform:translateY(-2px)}
   .annual-card h3{font-size:clamp(27px,7vw,34px);margin:17px 0 12px}
 }
+
+
+/* ON AIR — remove the blue card rim; keep platinum separators */
+.air-card:hover{border-color:rgba(174,196,225,.32)}
+.main-card{
+  background:linear-gradient(180deg,rgba(13,20,31,.10),rgba(13,20,31,.02));
+}
+.main-card:after{
+  border-color:rgba(174,182,196,.10);
+  box-shadow:0 0 0 24px rgba(174,182,196,.012),0 0 0 50px rgba(174,182,196,.008);
+}
