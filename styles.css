@@ -6,3 +6,33 @@
 .future-section{padding:105px 8%;text-align:center;background:linear-gradient(180deg,#0e131c,#080a10);border-top:1px solid var(--line)}.future-section .eyebrow{margin-bottom:20px}.future-section h2{font:300 clamp(34px,5vw,58px) Manrope;margin:0 0 15px}.future-section h2 span{color:#6eaeff}.future-section p:not(.eyebrow){font-size:12px;color:var(--muted);letter-spacing:.08em}.coming-soon{display:inline-block;margin-top:26px;border:1px solid var(--line);padding:10px 15px;color:#7f8ba0;font-size:8px}.site-footer{padding:35px 6.2%;display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);background:#07090e}.site-footer p,.site-footer>span{font-size:8px;letter-spacing:.14em;color:#778194;margin:0}
 @media(max-width:760px){.site-header{height:68px;padding:0 6%}.wordmark{font-size:10px}.menu-toggle{display:flex;background:none;border:0;padding:8px;flex-direction:column;gap:6px}.menu-toggle span{width:22px;height:1px;background:var(--linen)}.main-nav{display:none;position:absolute;top:68px;left:0;right:0;background:rgba(7,10,16,.96);padding:25px 6%;flex-direction:column;align-items:flex-start;gap:22px;border-bottom:1px solid var(--line)}.main-nav.open{display:flex}.hero{min-height:690px;height:92svh}.hero-image{background-position:43% center}.hero-shade{background:linear-gradient(90deg,rgba(5,7,12,.38),rgba(5,7,12,.12)),linear-gradient(0deg,rgba(5,7,12,.65),transparent 45%)}.hero-copy{margin:15px 7% 0;max-width:88%}.hero h1{font-size:clamp(43px,12vw,68px)}.hero-index{right:7%;bottom:25px;font-size:7px}.scroll-cue{display:none}.section{padding:78px 7%}.section-heading{display:block;margin-bottom:30px}.section-intro{margin-top:18px}.air-grid{grid-template-columns:1fr}.air-card{min-height:270px}.annual-card{min-height:235px}.tune-feature{grid-template-columns:1fr}.tune-art{min-height:290px}.tune-info{padding:38px 8% 43px}.future-section{padding:75px 7%}.site-footer{padding:30px 7%;flex-wrap:wrap}.site-footer p{order:3;width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+
+/* Hero copy: centered below the portal artwork */
+.hero-copy{
+  position:absolute;
+  left:50%;
+  bottom:76px;
+  transform:translateX(-50%);
+  width:min(92%,720px);
+  max-width:none;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.hero-copy .eyebrow{margin:0 0 12px}
+.hero-tagline{margin:0 0 17px}
+.discover-link{justify-content:center}
+@media(max-width:760px){
+  .hero-copy{
+    left:50%;
+    bottom:68px;
+    width:90%;
+    margin:0;
+    max-width:none;
+  }
+  .hero-copy .eyebrow{font-size:8px;letter-spacing:.13em;margin-bottom:10px}
+  .hero-tagline{font-size:12px;margin-bottom:14px}
+}
