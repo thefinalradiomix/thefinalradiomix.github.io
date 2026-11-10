@@ -8,13 +8,14 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
 
-/* Hero copy: aligned with the portal, in the floor space below it */
+/* Hero copy: directly beneath the waveform, inside the portal */
 .hero-copy{
   position:absolute;
-  left:28.5%;
-  bottom:42px;
+  left:50%;
+  top:54%;
+  bottom:auto;
   transform:translateX(-50%);
-  width:min(42vw,620px);
+  width:min(52vw,620px);
   max-width:none;
   margin:0;
   display:flex;
