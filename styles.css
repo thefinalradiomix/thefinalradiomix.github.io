@@ -293,3 +293,51 @@
   .tune-info{padding:40px 8% 45px}
   .tune-info h3{font-size:clamp(36px,10vw,46px)}
 }
+
+
+/* Secondary annual features: Anual + Tune of the Year */
+.air-specials{
+  width:min(900px,86%);
+  margin:0 2% 0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:stretch;
+}
+.air-specials .annual-card,
+.air-specials .year-tune-card{
+  width:100%;
+  min-height:170px;
+  margin:0;
+  padding:19px 0 18px 22px;
+  border-left:1px solid rgba(174,196,225,.2);
+  border-top:1px solid rgba(174,196,225,.16);
+  border-bottom:0;
+  background:linear-gradient(100deg,rgba(13,22,35,.22),transparent);
+  transform:none;
+}
+.air-specials .annual-card:hover{transform:translateY(-2px)}
+.air-specials .annual-card h3,
+.air-specials .year-tune-card h3{
+  font-size:clamp(23px,2.4vw,31px);
+  line-height:1.04;
+  margin:13px 0 10px;
+}
+.year-tune-card h3 span{color:#c2ccda}
+.year-tune-card .eyebrow{margin:0;color:#a9cfff}
+.year-tune-card .text-link{display:inline-block;margin-top:14px;color:#8796aa}
+@media(max-width:760px){
+  .air-specials{
+    width:87%;
+    margin:0 0 0 auto;
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .air-specials .annual-card,
+  .air-specials .year-tune-card{
+    min-height:0;
+    padding:18px 0 17px 20px;
+  }
+  .air-specials .annual-card h3,
+  .air-specials .year-tune-card h3{font-size:28px}
+}
