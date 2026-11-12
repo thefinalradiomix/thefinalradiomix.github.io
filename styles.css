@@ -472,3 +472,23 @@
   .footer-contact{width:100%;gap:18px;margin:8px 0}
   .footer-contact .eyebrow{width:100%;text-align:center}
 }
+
+
+/* ON AIR desktop: keep ANUAL and TUNE OF THE YEAR together beneath the main show */
+@media(min-width:761px){
+  .air-specials{
+    width:100%;
+    max-width:none;
+    margin:0;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:clamp(28px,4vw,60px);
+    align-items:start;
+  }
+  .air-specials .annual-card,
+  .air-specials .year-tune-card{
+    min-height:210px;
+    padding:22px 24px;
+  }
+  .air-specials .year-tune-card{align-items:flex-start}
+  .year-tune-player{width:100%;max-width:420px}
+}
