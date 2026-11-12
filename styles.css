@@ -492,3 +492,24 @@
   .air-specials .year-tune-card{align-items:flex-start}
   .year-tune-player{width:100%;max-width:420px}
 }
+
+
+/* Mobile ON AIR specials: align with the Tune of the Week content edge */
+@media(max-width:760px){
+  .air-specials{
+    width:100%;
+    max-width:none;
+    margin:0;
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .air-specials .annual-card,
+  .air-specials .year-tune-card{
+    width:100%;
+    margin:0;
+    padding:20px 0 20px 20px;
+    align-self:stretch;
+  }
+  .air-specials .year-tune-card{align-items:flex-start}
+  .year-tune-player{width:100%;max-width:420px}
+}
