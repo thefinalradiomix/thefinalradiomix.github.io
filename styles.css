@@ -341,3 +341,62 @@
   .air-specials .annual-card h3,
   .air-specials .year-tune-card h3{font-size:28px}
 }
+
+
+/* Tune of the Week — clear primary action, playlist as a secondary destination */
+.tune-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(210px,.34fr);
+  gap:26px;
+  align-items:stretch;
+}
+.tune-layout .tune-feature{min-width:0}
+.tune-info .primary-link{
+  margin-top:0;
+  font-size:10px;
+  letter-spacing:.14em;
+  padding:17px 22px;
+  box-shadow:0 8px 28px rgba(0,0,0,.18);
+}
+.tune-playlist{
+  min-height:100%;
+  padding:30px 25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  border:1px solid rgba(174,196,225,.17);
+  background:linear-gradient(145deg,rgba(16,25,39,.82),rgba(7,12,20,.78));
+  position:relative;
+  overflow:hidden;
+}
+.tune-playlist:before{
+  content:"";
+  position:absolute;
+  width:180px;height:180px;
+  right:-105px;top:-105px;
+  border:1px solid rgba(91,158,255,.18);
+  border-radius:50%;
+  box-shadow:0 0 0 18px rgba(91,158,255,.025),0 0 0 38px rgba(91,158,255,.018);
+}
+.tune-playlist .eyebrow{font-size:8px;margin:0 0 26px;color:#91bfff}
+.playlist-mark{height:38px;display:flex;align-items:center;gap:4px;margin-bottom:20px}
+.playlist-mark span{display:block;width:3px;border-radius:2px;background:#8dbfff;box-shadow:0 0 9px rgba(91,158,255,.4)}
+.playlist-mark span:nth-child(1),.playlist-mark span:nth-child(5){height:12px}
+.playlist-mark span:nth-child(2),.playlist-mark span:nth-child(4){height:25px}
+.playlist-mark span:nth-child(3){height:37px}
+.tune-playlist h3{font:400 18px Manrope,sans-serif;letter-spacing:.13em;margin:0 0 12px}
+.tune-playlist p:not(.eyebrow){font-size:11px;line-height:1.7;color:#9ba8bb;margin:0 0 24px}
+.tune-playlist>a{font-size:9px;font-weight:700;letter-spacing:.12em;color:#a9cfff;border-bottom:1px solid rgba(169,207,255,.42);padding-bottom:9px}
+.tune-playlist>a span{font-size:14px;margin-left:8px}
+@media(max-width:900px){
+  .tune-layout{grid-template-columns:minmax(0,1fr) 220px;gap:18px}
+  .tune-info{padding:42px 8%}
+}
+@media(max-width:760px){
+  .tune-layout{grid-template-columns:1fr;gap:18px}
+  .tune-playlist{min-height:0;padding:24px 23px}
+  .tune-playlist .eyebrow{margin-bottom:16px}
+  .playlist-mark{margin-bottom:13px}
+  .tune-playlist p:not(.eyebrow){margin-bottom:17px}
+}
