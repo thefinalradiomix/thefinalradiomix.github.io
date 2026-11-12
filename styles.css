@@ -424,3 +424,33 @@
 @media(max-width:760px){
   .tune-player{aspect-ratio:16 / 9;min-height:0}
 }
+
+
+/* Embedded Tune of the Week playlist */
+.tune-playlist{
+  justify-content:flex-start;
+  padding:30px 20px 22px;
+}
+.tune-playlist .eyebrow{margin-bottom:15px}
+.tune-playlist h3{margin:0 0 8px}
+.tune-playlist p:not(.eyebrow){margin:0 0 17px}
+.playlist-player{
+  width:100%;
+  aspect-ratio:16 / 9;
+  position:relative;
+  overflow:hidden;
+  background:#05080e;
+  border:1px solid rgba(174,196,225,.15);
+}
+.playlist-player iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+@media(max-width:760px){
+  .tune-playlist{padding:24px 20px}
+  .playlist-player{aspect-ratio:16 / 9}
+}
