@@ -400,3 +400,27 @@
   .playlist-mark{margin-bottom:13px}
   .tune-playlist p:not(.eyebrow){margin-bottom:17px}
 }
+
+
+/* Embedded YouTube player — play the weekly track without leaving the site */
+.tune-player{
+  position:relative;
+  width:100%;
+  min-height:0;
+  aspect-ratio:16 / 9;
+  align-self:center;
+  overflow:hidden;
+  background:#05080e;
+  border-right:1px solid rgba(174,196,225,.12);
+}
+.tune-player iframe{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+}
+@media(max-width:760px){
+  .tune-player{aspect-ratio:16 / 9;min-height:0}
+}
