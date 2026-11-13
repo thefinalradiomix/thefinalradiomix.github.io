@@ -634,3 +634,30 @@
   .collection-categories{grid-template-columns:1fr;gap:13px}
   .collection-category{min-height:0;padding:23px 21px}
 }
+
+
+/* Tune of the Year playlist inside The Collection */
+.collection-year-playlist{
+  width:100%;
+  max-width:620px;
+  margin:0 0 27px auto;
+}
+.collection-year-playlist .playlist-player{
+  width:100%;
+  aspect-ratio:16/9;
+  border:1px solid rgba(174,196,225,.2);
+  box-shadow:0 14px 42px rgba(0,0,0,.2);
+}
+.collection-external-link{
+  display:inline-block;
+  margin-top:13px;
+  color:#a9cfff;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.16em;
+  border-bottom:1px solid rgba(169,207,255,.35);
+  padding-bottom:7px;
+}
+@media(max-width:760px){
+  .collection-year-playlist{max-width:none;margin:0 0 23px}
+}
