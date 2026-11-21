@@ -787,3 +787,87 @@
   .archive-feature-link{min-height:96px;padding-left:17px}
   .archive-feature-title{font-size:23px}
 }
+
+
+/* FINAL ON AIR LAYOUT — two primary cards, two special selections */
+.air-grid{display:block}
+.air-main-column{
+  width:100%;padding:0;margin:0 0 34px;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(16px,2.4vw,30px);align-items:stretch;
+}
+.air-main-column .main-card,
+.air-main-column .archive-feature-link{
+  min-width:0;min-height:245px;height:100%;margin:0;
+  padding:25px 26px;display:flex;flex-direction:column;
+  justify-content:space-between;align-items:flex-start;
+  border:1px solid rgba(174,196,225,.22);
+  background:linear-gradient(145deg,rgba(17,29,46,.86),rgba(7,12,21,.94));
+  box-shadow:0 14px 36px rgba(0,0,0,.16);
+  transform:none;
+}
+.air-main-column .main-card{border-top:1px solid rgba(174,196,225,.3)}
+.air-main-column .main-card:hover,
+.air-main-column .archive-feature-link:hover{
+  border-color:rgba(111,179,255,.72);transform:translateY(-2px);
+  background:linear-gradient(145deg,rgba(20,43,70,.94),rgba(7,12,21,.97));
+}
+.air-main-column .main-card .card-kicker{margin:0}
+.air-main-column .main-card h3{white-space:normal;font-size:clamp(28px,3vw,43px);line-height:1.05}
+.air-main-column .main-card:after{right:5%;bottom:-190px}
+.air-main-column .archive-feature-link{position:relative;gap:10px}
+.air-main-column .archive-feature-kicker{font-size:9px;letter-spacing:.2em;color:#91bfff}
+.air-main-column .archive-feature-title{font:400 clamp(26px,3vw,42px)/1.05 Manrope,sans-serif;letter-spacing:-.035em}
+.air-main-column .archive-feature-detail{font-size:9px;letter-spacing:.15em}
+.air-main-column .archive-feature-arrow{right:25px;top:auto;bottom:22px;transform:none;font-size:27px}
+.air-specials{
+  width:100%;max-width:none;margin:0;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(16px,2.4vw,30px);align-items:stretch;
+}
+.air-specials .annual-card,
+.air-specials .year-tune-card{
+  min-width:0;min-height:210px;margin:0;padding:22px 24px;
+  border:1px solid rgba(174,196,225,.17);
+  background:linear-gradient(145deg,rgba(13,22,35,.78),rgba(7,12,20,.9));
+}
+.air-specials .year-tune-card{align-items:flex-start}
+.air-specials .year-tune-player{width:100%;max-width:420px}
+@media(max-width:760px){
+  .air-main-column{grid-template-columns:1fr;gap:14px;margin-bottom:26px}
+  .air-main-column .main-card,
+  .air-main-column .archive-feature-link{min-height:205px;padding:22px 20px}
+  .air-main-column .main-card h3{font-size:clamp(27px,8vw,36px)}
+  .air-main-column .archive-feature-title{font-size:clamp(29px,8vw,37px)}
+  .air-specials{grid-template-columns:1fr;gap:15px}
+  .air-specials .annual-card,
+  .air-specials .year-tune-card{min-height:0;padding:20px}
+}
+
+/* ARCHIVE — quieter background and contained episode panels */
+body.archive-page::before{
+  background-image:
+    radial-gradient(ellipse at 50% 0%,rgba(20,58,101,.24),transparent 55%),
+    linear-gradient(180deg,#070b12 0%,#090f19 52%,#070a10 100%);
+  background-position:center;background-size:cover;background-repeat:no-repeat;
+}
+.archive-page{background:#070b12}
+.archive-page .archive-main{max-width:920px;padding-top:155px}
+.archive-page .archive-heading{padding-bottom:30px;border-bottom:1px solid rgba(174,196,225,.16);margin-bottom:38px}
+.archive-page .archive-year{
+  padding:24px 28px 14px;margin:0 0 24px;
+  border:1px solid rgba(174,196,225,.16);
+  background:linear-gradient(145deg,rgba(16,25,39,.94),rgba(8,13,22,.97));
+  box-shadow:0 18px 48px rgba(0,0,0,.2);
+}
+.archive-page .archive-year-heading{margin-bottom:10px}
+.archive-page .archive-episode{border-bottom:1px solid rgba(174,196,225,.12)}
+.archive-page .archive-episode:last-child{border-bottom:0}
+.archive-page .archive-episode summary{padding:18px 8px}
+.archive-page .archive-episode-content{padding:0 8px 18px}
+.archive-page .archive-back{margin-top:42px}
+@media(max-width:760px){
+  .archive-page .archive-main{padding-top:120px}
+  .archive-page .archive-year{padding:19px 16px 10px;margin-bottom:18px}
+  .archive-page .archive-episode summary{padding:15px 3px}
+}
