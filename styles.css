@@ -758,3 +758,32 @@
   .archive-episode-year{font-size:10px}
   .archive-home-link{margin:12px 0 0;display:table}
 }
+
+
+/* ON AIR — dedicated radio archive feature */
+.air-main-column{min-width:0;display:flex;flex-direction:column;gap:18px;padding-right:34px}
+.air-main-column .main-card{width:100%;padding-right:0}
+.archive-feature-link{
+  position:relative;min-height:104px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+  padding:17px 56px 17px 20px;
+  border:1px solid rgba(74,145,255,.48);
+  background:linear-gradient(105deg,rgba(16,48,88,.78),rgba(10,19,33,.92));
+  box-shadow:inset 3px 0 0 #2584ff,0 10px 30px rgba(0,0,0,.14);
+  transition:background .2s,border-color .2s,transform .2s;
+}
+.archive-feature-link:hover{
+  background:linear-gradient(105deg,rgba(22,75,135,.82),rgba(10,22,40,.96));
+  border-color:rgba(111,179,255,.9);transform:translateY(-2px)
+}
+.archive-feature-kicker{font-size:8px;letter-spacing:.2em;color:#91bfff;margin-bottom:7px}
+.archive-feature-title{font:400 clamp(20px,2.2vw,27px)/1 Manrope,sans-serif;letter-spacing:.045em;color:#edf4ff}
+.archive-feature-title strong{font-weight:700;color:#8fc2ff}
+.archive-feature-detail{font-size:8px;letter-spacing:.15em;color:#a7b6cb;margin-top:8px}
+.archive-feature-arrow{position:absolute;right:21px;top:50%;transform:translateY(-50%);font-size:25px;color:#91c2ff}
+.air-specials .annual-card .text-link{display:inline-block;color:#a9cfff;font-weight:700}
+@media(max-width:760px){
+  .air-main-column{padding-right:0;gap:14px}
+  .archive-feature-link{min-height:96px;padding-left:17px}
+  .archive-feature-title{font-size:23px}
+}
